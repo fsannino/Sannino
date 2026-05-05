@@ -13,11 +13,12 @@ export function PesquisaBanner() {
               Pesquisa em andamento
             </p>
             <h2 className="text-2xl md:text-3xl max-w-2xl" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--color-paper)' }}>
-              Pós-Doutorado UNICAMP/FCA — Blockchain, IA e Regulação Sanitária (ANVISA)
+              Pós-Doutoramento UNICAMP/FCA — Blockchain + IA Generativa em ambientes farmacêuticos regulados
             </h2>
             <p className="text-sm max-w-xl" style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}>
-              Investigando o potencial de tecnologias de registro distribuído e inteligência artificial
-              para aprimorar os processos regulatórios no setor de saúde brasileiro.
+              Plataforma Rhizom + smart contracts em Solidity para rastreabilidade ALCOA+ em salas
+              limpas NB3/NB4. Pesquisa orientada à modernização da regulação ANVISA via tecnologia
+              de registro distribuído e LLMs locais.
             </p>
           </div>
 

@@ -3,79 +3,79 @@ import type { Article, Service, HubCard, Credencial, Pilar, NavItem } from './ty
 // TODO(CMS): Replace with payload.find({ collection: 'articles', limit: 3, sort: '-publishedAt' })
 export const latestArticles: Article[] = [
   {
-    slug: 'gestao-mudanca-pos-fusao',
-    title: 'Gestão da Mudança no Pós-Fusão: Lições de 20 Anos de Prática',
+    slug: 'integracao-ma-dow-corteva',
+    title: 'Integração M&A em Larga Escala: Lições da Cisão Dow–DuPont–Corteva',
     excerpt:
-      'Fusões e aquisições falham principalmente por causas humanas. Veja como estruturar uma abordagem de change management que protege o valor da transação.',
-    category: 'Gestão da Mudança',
+      'Como segregar dados, sistemas SAP e infraestrutura analítica em 17 plantas e 5 países sem comprometer a continuidade do negócio. Lições de uma das maiores separações corporativas da década.',
+    category: 'M&A',
     publishedAt: '2026-04-15',
     readingTimeMinutes: 9,
-    href: '/blog/gestao-mudanca-pos-fusao',
+    href: '/blog/integracao-ma-dow-corteva',
   },
   {
-    slug: 'etica-pesquisa-ia-2026',
-    title: 'Ética em Pesquisa com IA: O Que Mudou em 2026 e o Que Ainda Falta',
+    slug: 'blockchain-ia-salas-limpas',
+    title: 'Blockchain + IA Generativa em Ambientes Farmacêuticos Regulados',
     excerpt:
-      'A proliferação de ferramentas de IA na pesquisa acadêmica levanta questões éticas que os comitês de ética ainda não conseguem responder. Um panorama prático.',
-    category: 'Ética em Pesquisa',
+      'Pesquisa em andamento no Pós-Doutoramento UNICAMP/FCA sobre rastreabilidade ALCOA+ em salas limpas NB3/NB4 com smart contracts (Solidity) e LLMs locais. Um panorama da agenda.',
+    category: 'Pesquisa',
     publishedAt: '2026-03-28',
     readingTimeMinutes: 12,
-    href: '/blog/etica-pesquisa-ia-2026',
+    href: '/blog/blockchain-ia-salas-limpas',
   },
   {
-    slug: 'metodologia-mista-quando-usar',
-    title: 'Metodologia Mista: Quando Usar e Como Não Errar na Triangulação',
+    slug: 'crystal-ball-power-bi',
+    title: 'Crystal Ball + Power BI: Antecipando Riscos em Programas de Transformação',
     excerpt:
-      'A pesquisa de métodos mistos é poderosa, mas frequentemente mal aplicada. Um guia para mestrandos que precisam justificar a escolha metodológica para a banca.',
-    category: 'Metodologia',
+      'Combinando análise de risco quantitativa Monte Carlo com dashboards executivos para antecipar atrasos, desvios de orçamento e gaps de adoção. Aplicação prática em ETRM e programas SAP.',
+    category: 'Analytics',
     publishedAt: '2026-03-10',
     readingTimeMinutes: 8,
-    href: '/blog/metodologia-mista-quando-usar',
+    href: '/blog/crystal-ball-power-bi',
   },
 ];
 
 // TODO(CMS): Replace with payload.find({ collection: 'services' })
 export const services: Service[] = [
   {
-    id: 'gestao-mudanca',
-    title: 'Gestão da Mudança',
-    subtitle: 'Change Management Estruturado',
+    id: 'transformacao-mudanca',
+    title: 'Transformação & Gestão da Mudança',
+    subtitle: 'LaMarsh Master · MCMP™ · CCMP™',
     description:
-      'Planejamento e execução de iniciativas de mudança com metodologia MCMP™, garantindo adoção, sustentabilidade e ROI da transformação.',
+      'Programas de transformação corporativa em larga escala apoiados por metodologia LaMarsh (Master Licensee BR/LATAM exclusivo), PROSCI e ACMP. Foco em adoção, sustentabilidade e captura de valor.',
     features: [
-      'Diagnóstico de prontidão organizacional',
-      'Estratégia de comunicação e engajamento',
-      'Treinamento e capacitação de líderes',
+      'Diagnóstico de prontidão e estratégia de mudança',
+      'Redesenho organizacional e cultural',
+      'Comunicação, treinamento e adoção',
     ],
     ctaLabel: 'Saiba mais',
     ctaHref: '/servicos/gestao-mudanca',
     icon: 'ArrowRightLeft',
   },
   {
-    id: 'transformacao-organizacional',
-    title: 'Transformação Organizacional',
-    subtitle: 'Design e Implementação',
+    id: 'data-ia',
+    title: 'Data & Analytics + IA Generativa',
+    subtitle: 'BI · Python · LLMs · Automação',
     description:
-      'Redesenho de estruturas, processos e cultura organizacional para suportar novos modelos de negócio e objetivos estratégicos.',
+      'BI executivo (Power BI, Tableau, Looker) e analytics aplicado: forecasting, modelagem preditiva, IA generativa (OpenAI, Ollama/Gemma) com RAG e agentes (CrewAI, LangGraph) integrados a workflows corporativos via n8n e MCP.',
     features: [
-      'Assessment de maturidade organizacional',
-      'Redesenho de estrutura e governança',
-      'Gestão de stakeholders e resistências',
+      'Dashboards executivos e self-service analytics',
+      'Pipelines de dados e modelagem preditiva',
+      'Automação com agentes e LLMs',
     ],
     ctaLabel: 'Saiba mais',
-    ctaHref: '/servicos/transformacao-organizacional',
-    icon: 'Building2',
+    ctaHref: '/servicos/data-ia',
+    icon: 'Brain',
   },
   {
     id: 'pmo-governanca',
-    title: 'PMO & Governança',
-    subtitle: 'Escritório de Projetos e Portfólio',
+    title: 'PMO & Portfólio Estratégico',
+    subtitle: 'Programas SAP · ETRM · CAPEX',
     description:
-      'Estruturação e operação de PMOs com foco em priorização de portfólio, governança de projetos e dashboards executivos.',
+      'Estruturação e operação de PMOs corporativos, priorização de portfólio multicritério e governança de programas SAP/ERP, ETRM e CAPEX (R$ 5M–R$ 80M+) com dashboards executivos e análise quantitativa de risco (Crystal Ball).',
     features: [
-      'Implantação e maturação de PMO',
-      'Metodologias ágeis e híbridas',
-      'Ferramentas e KPIs de portfólio',
+      'PMO corporativo e portfólio',
+      'Programas SAP / ERP / ETRM',
+      'Análise de risco quantitativa',
     ],
     ctaLabel: 'Saiba mais',
     ctaHref: '/servicos/pmo-governanca',
@@ -83,25 +83,40 @@ export const services: Service[] = [
   },
   {
     id: 'integracao-ma',
-    title: 'Integração M&A',
-    subtitle: 'Fusões e Aquisições',
+    title: 'Integração M&A & Sinergias',
+    subtitle: 'Pós-Fusão · Synergy Analytics',
     description:
-      'Gestão da integração pós-fusão com foco em preservação de valor, integração cultural e manutenção de talentos críticos.',
+      'Liderança de integrações pós-fusão multi-países (Dow LATAM 5 países, Nexa BR/Peru, Tate & Lyle), com modelos analíticos de captura de sinergia, integração cultural e mediação de disputas em nível de liderança.',
     features: [
-      'Due diligence cultural e organizacional',
       'Plano de integração 100 dias',
-      'Retenção de talentos e gestão de incerteza',
+      'Synergy analytics e captura de valor',
+      'Integração cultural e organizacional',
     ],
     ctaLabel: 'Saiba mais',
     ctaHref: '/servicos/integracao-ma',
     icon: 'Merge',
   },
   {
+    id: 'resolucao-disputas',
+    title: 'Resolução de Disputas',
+    subtitle: 'Mediação · Conciliação · Arbitragem',
+    description:
+      'Apoio técnico e prático em conflitos contratuais, pós-fusão, governança e disputas entre lideranças. Conciliador Judicial TJSP e membro CIArb (UK). Pós-graduação em Métodos Alternativos de Resolução de Conflitos pela EPM.',
+    features: [
+      'Mediação de disputas pós-M&A',
+      'Conciliação contratual e interna',
+      'Arbitragem (CIArb-UK)',
+    ],
+    ctaLabel: 'Saiba mais',
+    ctaHref: '/servicos/resolucao-disputas',
+    icon: 'Scale',
+  },
+  {
     id: 'research-as-a-service',
     title: 'Research-as-a-Service',
     subtitle: 'Pesquisa Aplicada para Empresas',
     description:
-      'Pesquisa acadêmica rigorosa com aplicação prática: levantamentos, sínteses de literatura e estudos de caso para suportar decisões estratégicas.',
+      'Pesquisa acadêmica com aplicação prática: revisões sistemáticas, levantamentos quantitativos/qualitativos e estudos de caso para suportar decisões estratégicas. Doutor pela FEA-USP, MBA Data Science ESALQ-USP, Pós-Doc UNICAMP em andamento.',
     features: [
       'Revisão sistemática e scoping review',
       'Pesquisa quantitativa e qualitativa',
@@ -148,11 +163,11 @@ export const hubCards: HubCard[] = [
 
 // TODO(CMS): Replace with payload.find({ collection: 'credentials' })
 export const credenciais: Credencial[] = [
-  { code: 'MCMP™', label: 'Master Certified Management Professional', issuer: 'ACMP' },
-  { code: 'CCMP™', label: 'Certified Change Management Professional', issuer: 'ACMP' },
-  { code: 'LaMarsh', label: 'LaMarsh Certified Change Manager', issuer: 'LaMarsh Global — LATAM' },
-  { code: 'FEA-USP', label: 'Pós-Doutor', issuer: 'Universidade de São Paulo' },
-  { code: 'UNICAMP', label: 'Pós-Doutor em andamento', issuer: 'Universidade Estadual de Campinas' },
+  { code: 'LaMarsh Master', label: 'Master Licensee exclusivo BR/LATAM', issuer: 'LaMarsh Global' },
+  { code: 'MCMP™ · CCMP™', label: 'Master & Certified Change Management Professional', issuer: 'ACMP' },
+  { code: 'PMP · SAFe', label: 'Project Management & Agile at Scale', issuer: 'PMI · Scaled Agile' },
+  { code: 'Doutor', label: 'Doutorado em Administração de Empresas', issuer: 'FEA-USP' },
+  { code: 'Pós-Doc', label: 'Pós-Doutoramento em andamento', issuer: 'UNICAMP/FCA' },
 ];
 
 // TODO(CMS): Replace with payload.find({ collection: 'pillars' })
@@ -160,7 +175,7 @@ export const tresPilares: Pilar[] = [
   {
     title: 'Consultor',
     description:
-      'Soluções de change management e transformação organizacional para empresas que enfrentam mudanças complexas — fusões, reestruturações ou transformações digitais.',
+      'Transformação corporativa, integração M&A, Data & IA Generativa e resolução de disputas para corporações globais. LaMarsh Master Licensee BR/LATAM, MCMP™/CCMP™, PMP/SAFe.',
     stats: '20+',
     statsLabel: 'anos de experiência',
     icon: 'Briefcase',
@@ -169,18 +184,18 @@ export const tresPilares: Pilar[] = [
   {
     title: 'Pesquisador',
     description:
-      'Pós-doutor em andamento na UNICAMP/FCA, com pesquisa em blockchain, IA e regulação sanitária. Integra o rigor acadêmico à aplicação prática nos projetos de consultoria.',
-    stats: '50+',
-    statsLabel: 'projetos realizados',
+      'Pós-Doc em andamento na UNICAMP/FCA — Blockchain + IA Generativa em ambientes farmacêuticos regulados. Doutor pela FEA-USP, MBA Data Science ESALQ-USP. Produtos digitais com IA aplicada.',
+    stats: '5+',
+    statsLabel: 'produtos digitais lançados',
     icon: 'FlaskConical',
     href: '/pesquisa',
   },
   {
     title: 'Educador',
     description:
-      'Hub acadêmico com conteúdo de metodologia, ética em pesquisa e ferramentas práticas para mestrandos, doutorandos e pesquisadores de todas as áreas.',
+      'Hub acadêmico aberto + treinamentos in-company em Gestão da Mudança, Data Analytics, IA Generativa e automação low-code (n8n, MCP, OpenAI/Anthropic). Universidade corporativa Coca-Cola FEMSA: 5.000+ treinados.',
     stats: '5k+',
-    statsLabel: 'pesquisadores atendidos',
+    statsLabel: 'profissionais treinados',
     icon: 'GraduationCap',
     href: '/academico',
   },

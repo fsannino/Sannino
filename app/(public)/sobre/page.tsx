@@ -7,20 +7,22 @@ import { Separator } from '@/components/ui/separator';
 export const metadata: Metadata = {
   title: 'Sobre',
   description:
-    'Conheça Fabiano Sannino — consultor MCMP™/CCMP™, pesquisador pós-doutor e educador com 20+ anos em gestão da mudança e transformação organizacional.',
+    'Fabiano Sannino — Doutor pela FEA-USP, Master Licensee LaMarsh BR/LATAM. 20+ anos liderando transformação corporativa, M&A multi-países, Data & IA Generativa e resolução de disputas em corporações globais.',
 };
 
 const stats = [
   { value: '20+', label: 'anos de experiência' },
-  { value: '50+', label: 'projetos realizados' },
-  { value: '6', label: 'países atendidos' },
-  { value: '5k+', label: 'pesquisadores no hub' },
+  { value: '50+', label: 'projetos entregues' },
+  { value: '7+', label: 'países atendidos' },
+  { value: '20k+', label: 'pessoas impactadas' },
 ];
 
 const educacao = [
-  { periodo: 'Em andamento', titulo: 'Pós-Doutorado em Administração', instituicao: 'UNICAMP — Faculdade de Ciências Aplicadas (FCA)', area: 'Blockchain, IA e Regulação Sanitária' },
-  { periodo: '2022', titulo: 'Pós-Doutorado em Administração', instituicao: 'FEA-USP — Universidade de São Paulo', area: 'Gestão da Mudança e Transformação Organizacional' },
-  { periodo: '2018', titulo: 'Doutorado em Administração', instituicao: 'FEA-USP', area: 'Change Management em Fusões e Aquisições' },
+  { periodo: 'Em andamento', titulo: 'Pós-Doutorado', instituicao: 'UNICAMP — Faculdade de Ciências Aplicadas (FCA)', area: 'Blockchain + IA Generativa em ambientes farmacêuticos regulados' },
+  { periodo: '2024', titulo: 'MBA em Data Science & Analytics', instituicao: 'ESALQ-USP', area: 'Pipelines de dados, modelagem preditiva e IA aplicada' },
+  { periodo: '2021', titulo: 'Doutorado em Administração de Empresas', instituicao: 'FEA-USP — Universidade de São Paulo', area: 'Gestão da Mudança e M&A' },
+  { periodo: '2006', titulo: 'Mestrado em Engenharia Industrial', instituicao: 'PUC-Rio', area: 'Operações e gestão de projetos' },
+  { periodo: '2000', titulo: 'Bacharelado em Engenharia Elétrica', instituicao: 'IMT — Instituto Mauá de Tecnologia', area: 'Engenharia Elétrica' },
 ];
 
 const subNav = [

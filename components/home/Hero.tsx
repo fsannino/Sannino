@@ -89,7 +89,7 @@ export function Hero() {
               className="flex flex-wrap gap-x-6 gap-y-2 pt-4"
               style={{ borderTop: '1px solid rgba(250,250,247,0.1)' }}
             >
-              {['MCMP™ Certified', 'CCMP™ Certified', 'LaMarsh LATAM', 'FEA-USP'].map((cred) => (
+              {['LaMarsh Master · BR/LATAM', 'MCMP™ · CCMP™', 'PMP · SAFe', 'Doutor FEA-USP'].map((cred) => (
                 <span
                   key={cred}
                   className="text-xs"

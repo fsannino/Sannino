@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  ArrowRightLeft, Building2, LayoutDashboard, Merge, FlaskConical, Check, type LucideProps,
+  ArrowRightLeft, Building2, LayoutDashboard, Merge, FlaskConical, Brain, Scale, Check, type LucideProps,
 } from 'lucide-react';
 import { services } from '@/lib/data/static';
 import { FadeInSection } from '@/components/shared/FadeInSection';
@@ -9,7 +9,7 @@ import { FadeInSection } from '@/components/shared/FadeInSection';
 export const metadata: Metadata = {
   title: 'Serviços',
   description:
-    'Consultoria em Gestão da Mudança, Transformação Organizacional, PMO, Integração M&A e Research-as-a-Service com Fabiano Sannino — MCMP™ CCMP™.',
+    'Transformação & Gestão da Mudança (LaMarsh Master BR/LATAM), Data & IA Generativa, PMO, M&A, Resolução de Disputas e Research-as-a-Service com Fabiano Sannino.',
 };
 
 const iconMap: Record<string, React.ComponentType<LucideProps>> = {
@@ -18,6 +18,8 @@ const iconMap: Record<string, React.ComponentType<LucideProps>> = {
   LayoutDashboard,
   Merge,
   FlaskConical,
+  Brain,
+  Scale,
 };
 
 export default function ServicosPage() {
