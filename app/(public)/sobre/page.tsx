@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { credenciais } from '@/lib/data/static';
 import { Badge } from '@/components/ui/badge';
@@ -72,24 +73,19 @@ export default function SobrePage() {
               </div>
             </div>
 
-            {/* Photo placeholder */}
+            {/* Foto */}
             <div className="flex justify-center lg:justify-end">
               <div
                 className="w-64 h-80 rounded overflow-hidden relative"
                 style={{ border: '2px solid var(--color-gold)', boxShadow: '6px 6px 0px rgba(201,168,76,0.15)' }}
               >
-                <div
-                  className="absolute inset-0 flex items-center justify-center"
-                  style={{ background: 'linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%)' }}
-                >
-                  <span
-                    className="text-8xl opacity-10 select-none"
-                    style={{ fontFamily: 'var(--font-playfair)', color: 'var(--color-gold)' }}
-                    aria-hidden="true"
-                  >
-                    FS
-                  </span>
-                </div>
+                <Image
+                  src="/images/sannino.jpg"
+                  alt="Fabiano Sannino"
+                  fill
+                  sizes="256px"
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export function Hero() {
@@ -115,26 +116,14 @@ export function Hero() {
                 boxShadow: '8px 8px 0px rgba(201,168,76,0.2)',
               }}
             >
-              {/* Placeholder — replace with next/image when photo is available */}
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-end pb-8"
-                style={{ background: 'linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%)' }}
-              >
-                {/* Monogram */}
-                <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl select-none opacity-10"
-                  style={{ fontFamily: 'var(--font-playfair)', color: 'var(--color-gold)' }}
-                  aria-hidden="true"
-                >
-                  FS
-                </div>
-                <p
-                  className="text-sm relative z-10"
-                  style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-dm-sans)' }}
-                >
-                  Fabiano Sannino
-                </p>
-              </div>
+              <Image
+                src="/images/sannino.jpg"
+                alt="Fabiano Sannino"
+                fill
+                priority
+                sizes="(min-width: 1024px) 320px, 288px"
+                className="object-cover"
+              />
             </div>
           </motion.div>
         </div>
