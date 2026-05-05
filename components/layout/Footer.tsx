@@ -88,11 +88,13 @@ export function Footer() {
           className="flex flex-wrap gap-x-6 gap-y-1 py-4 border-t border-b text-xs"
           style={{ borderColor: 'var(--color-rule)', color: 'var(--color-footnote)' }}
         >
-          <span style={{ color: 'var(--color-gold)' }}>MCMP™</span>
-          <span style={{ color: 'var(--color-gold)' }}>CCMP™</span>
-          <span style={{ color: 'var(--color-gold)' }}>LaMarsh Certified</span>
-          <span>Pós-Doutor FEA-USP</span>
-          <span>Pós-Doutor UNICAMP (em andamento)</span>
+          <span style={{ color: 'var(--color-gold)' }}>LaMarsh Master · BR/LATAM</span>
+          <span style={{ color: 'var(--color-gold)' }}>MCMP™ · CCMP™</span>
+          <span style={{ color: 'var(--color-gold)' }}>PMP · SAFe</span>
+          <span>Doutor FEA-USP</span>
+          <span>MBA Data Science ESALQ-USP</span>
+          <span>Pós-Doc UNICAMP (em andamento)</span>
+          <span>CIArb (UK) · Conciliador TJSP</span>
         </div>
 
         {/* Bottom row */}

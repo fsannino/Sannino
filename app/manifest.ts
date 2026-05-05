@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Fabiano Sannino',
     short_name: 'Sannino',
-    description: 'Hub acadêmico e profissional de Fabiano Sannino — Gestão da Mudança, Pesquisa Aplicada e Metodologia.',
+    description: 'Hub acadêmico e profissional de Fabiano Sannino — Transformação Corporativa, Data & IA, M&A e Resolução de Disputas.',
     start_url: '/',
     display: 'standalone',
     background_color: '#F5F0E8',

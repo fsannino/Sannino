@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Fabiano Sannino',
   },
   description:
-    'Hub acadêmico e profissional de Fabiano Sannino — especialista em Gestão da Mudança, Transformação Organizacional e Pesquisa Aplicada.',
+    'Hub acadêmico e profissional de Fabiano Sannino — Doutor pela FEA-USP, Master Licensee LaMarsh BR/LATAM. Transformação corporativa, M&A, Data & IA Generativa e Resolução de Disputas.',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
