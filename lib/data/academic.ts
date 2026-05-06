@@ -33,7 +33,7 @@ export const academicSections: AcademicSection[] = [
       'Ferramenta interativa que recomenda a abordagem e o método mais adequados para sua pesquisa — a partir do tipo de pergunta, área, tempo e dados disponíveis.',
     href: '/academico/metodometro',
     icon: 'Compass',
-    status: 'soon',
+    status: 'available',
     badge: 'Ferramenta',
   },
   {
