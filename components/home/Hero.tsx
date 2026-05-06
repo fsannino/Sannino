@@ -44,6 +44,18 @@ export function Hero() {
             </h1>
 
             <p
+              className="text-xl md:text-2xl leading-snug max-w-xl"
+              style={{
+                color: 'var(--color-gold)',
+                fontFamily: 'var(--font-spectral)',
+                fontStyle: 'italic',
+                fontWeight: 400,
+              }}
+            >
+              Conectando indústria e academia pelo conhecimento.
+            </p>
+
+            <p
               className="text-lg leading-relaxed max-w-lg"
               style={{ color: 'rgba(250,250,247,0.7)', fontFamily: 'var(--font-source-serif)' }}
             >
@@ -90,7 +102,7 @@ export function Hero() {
               className="flex flex-wrap gap-x-6 gap-y-2 pt-4"
               style={{ borderTop: '1px solid rgba(250,250,247,0.1)' }}
             >
-              {['LaMarsh Master · BR/LATAM', 'MCMP™ · CCMP™', 'PMP · SAFe', 'Doutor FEA-USP'].map((cred) => (
+              {['Engenheiro · IMT/PUC-Rio', 'MCMP™ · CCMP™', 'PMP · SAFe', 'Doutor FEA-USP'].map((cred) => (
                 <span
                   key={cred}
                   className="text-xs"

@@ -88,7 +88,7 @@ export function Footer() {
           className="flex flex-wrap gap-x-6 gap-y-1 py-4 border-t border-b text-xs"
           style={{ borderColor: 'var(--color-rule)', color: 'var(--color-footnote)' }}
         >
-          <span style={{ color: 'var(--color-gold)' }}>LaMarsh Master · BR/LATAM</span>
+          <span style={{ color: 'var(--color-gold)' }}>Engenheiro · IMT/PUC-Rio</span>
           <span style={{ color: 'var(--color-gold)' }}>MCMP™ · CCMP™</span>
           <span style={{ color: 'var(--color-gold)' }}>PMP · SAFe</span>
           <span>Doutor FEA-USP</span>

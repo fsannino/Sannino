@@ -44,7 +44,7 @@ export const academicSections: AcademicSection[] = [
       'Checklists de submissão ao CEP/CONEP, dilemas de IA na pesquisa acadêmica, plagiarismo, integridade e ética por área de conhecimento.',
     href: '/academico/etica-pesquisa',
     icon: 'Scale',
-    status: 'soon',
+    status: 'available',
   },
   {
     id: 'pesquisa-por-area',
@@ -54,7 +54,7 @@ export const academicSections: AcademicSection[] = [
       'Orientação metodológica específica por área de conhecimento — métodos preferidos, periódicos, padrões de citação, exigências regulatórias.',
     href: '/academico/pesquisa-por-area',
     icon: 'Layers',
-    status: 'soon',
+    status: 'available',
   },
   {
     id: 'materiais',
@@ -64,7 +64,7 @@ export const academicSections: AcademicSection[] = [
       'Slides de aulas, templates ABNT, modelos de TCLE, planilhas estatísticas, checklists de submissão. Acesso gratuito mediante cadastro.',
     href: '/academico/materiais',
     icon: 'FolderDown',
-    status: 'soon',
+    status: 'available',
     badge: 'Cadastro',
   },
   {
@@ -75,6 +75,6 @@ export const academicSections: AcademicSection[] = [
       'Definições enxutas de termos frequentes em metodologia, estatística, ética e regulação — para mestrandos, doutorandos e revisores.',
     href: '/academico/glossario',
     icon: 'BookA',
-    status: 'planned',
+    status: 'available',
   },
 ];
