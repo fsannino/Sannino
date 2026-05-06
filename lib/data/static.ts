@@ -67,9 +67,9 @@ export const services: Service[] = [
   {
     id: 'transformacao-mudanca',
     title: 'Transformação & Gestão da Mudança',
-    subtitle: 'LaMarsh Master · MCMP™ · CCMP™',
+    subtitle: 'MCMP™ · CCMP™ · PROSCI · LaMarsh',
     description:
-      'Programas de transformação corporativa em larga escala apoiados por metodologia LaMarsh (Master Licensee BR/LATAM exclusivo), PROSCI e ACMP. Foco em adoção, sustentabilidade e captura de valor.',
+      'Programas de transformação corporativa em larga escala apoiados por metodologias consagradas — LaMarsh, PROSCI e ACMP (MCMP™/CCMP™). Foco em adoção, sustentabilidade e captura de valor.',
     features: [
       'Diagnóstico de prontidão e estratégia de mudança',
       'Redesenho organizacional e cultural',
@@ -191,7 +191,7 @@ export const hubCards: HubCard[] = [
 
 // TODO(CMS): Replace with payload.find({ collection: 'credentials' })
 export const credenciais: Credencial[] = [
-  { code: 'LaMarsh Master', label: 'Master Licensee exclusivo BR/LATAM', issuer: 'LaMarsh Global' },
+  { code: 'Engenheiro', label: 'Bacharel em Eng. Elétrica + Mestrado em Eng. Industrial', issuer: 'IMT · PUC-Rio' },
   { code: 'MCMP™ · CCMP™', label: 'Master & Certified Change Management Professional', issuer: 'ACMP' },
   { code: 'PMP · SAFe', label: 'Project Management & Agile at Scale', issuer: 'PMI · Scaled Agile' },
   { code: 'Doutor', label: 'Doutorado em Administração de Empresas', issuer: 'FEA-USP' },
@@ -203,7 +203,7 @@ export const tresPilares: Pilar[] = [
   {
     title: 'Consultor',
     description:
-      'Transformação corporativa, integração M&A, Data & IA Generativa e resolução de disputas para corporações globais. LaMarsh Master Licensee BR/LATAM, MCMP™/CCMP™, PMP/SAFe.',
+      'Transformação corporativa, integração M&A, Data & IA Generativa e resolução de disputas para corporações globais. MCMP™/CCMP™ pela ACMP, PMP/SAFe pelo PMI, LaMarsh Certified.',
     stats: '20+',
     statsLabel: 'anos de experiência',
     icon: 'Briefcase',

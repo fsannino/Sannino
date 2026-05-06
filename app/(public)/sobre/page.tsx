@@ -8,7 +8,7 @@ import { Separator } from '@/components/ui/separator';
 export const metadata: Metadata = {
   title: 'Sobre',
   description:
-    'Fabiano Sannino — Doutor pela FEA-USP, Master Licensee LaMarsh BR/LATAM. 20+ anos liderando transformação corporativa, M&A multi-países, Data & IA Generativa e resolução de disputas em corporações globais.',
+    'Fabiano Sannino — Engenheiro (IMT, PUC-Rio), Doutor pela FEA-USP. 20+ anos liderando transformação corporativa, M&A multi-países, Data & IA Generativa e resolução de disputas em corporações globais.',
 };
 
 const stats = [
@@ -152,10 +152,12 @@ export default function SobrePage() {
               sistemas e redesenhos de cultura organizacional.
             </p>
             <p>
-              Sou certificado MCMP™ (Master Certified Management Professional) e CCMP™ (Certified
-              Change Management Professional) pela ACMP — as mais altas certificações internacionais
-              em gestão da mudança — e LaMarsh Certified Change Manager pela LaMarsh Global para
-              a América Latina.
+              Sou Engenheiro de formação (Bacharel em Engenharia Elétrica pelo IMT, Mestre em
+              Engenharia Industrial pela PUC-Rio) — base que atravessa toda a minha prática.
+              Certificado MCMP™ (Master Certified Management Professional) e CCMP™ (Certified
+              Change Management Professional) pela ACMP — as mais altas certificações
+              internacionais em gestão da mudança — além de LaMarsh Certified Change Manager
+              pela LaMarsh Global e PMP/SAFe pelo PMI.
             </p>
             <p>
               No plano acadêmico, realizei meu Pós-Doutorado na FEA-USP e atualmente desenvolvo

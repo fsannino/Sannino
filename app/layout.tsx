@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Fabiano Sannino',
   },
   description:
-    'Hub acadêmico e profissional de Fabiano Sannino — Doutor pela FEA-USP, Master Licensee LaMarsh BR/LATAM. Transformação corporativa, M&A, Data & IA Generativa e Resolução de Disputas.',
+    'Hub acadêmico e profissional de Fabiano Sannino — Engenheiro, Doutor pela FEA-USP. Conectando indústria e academia pelo conhecimento: transformação corporativa, M&A, Data & IA Generativa e Resolução de Disputas.',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
