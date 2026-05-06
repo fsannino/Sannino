@@ -23,6 +23,8 @@ export interface MethodologyMethod {
   approach: Approach;
   approachLabel: string;
   authors: string;
+  deepLink?: string;
+  deepLinkLabel?: string;
 }
 
 export const approaches: MethodologyApproach[] = [
@@ -184,6 +186,8 @@ export const methods: MethodologyMethod[] = [
     approach: 'flexivel',
     approachLabel: 'Quanti · Quali',
     authors: 'PRISMA · Cochrane · Tranfield',
+    deepLink: '/academico/prisma',
+    deepLinkLabel: 'Guia PRISMA 2020 →',
   },
   {
     id: 'design-science',
