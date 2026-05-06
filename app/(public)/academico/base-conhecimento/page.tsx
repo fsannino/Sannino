@@ -273,6 +273,15 @@ export default function BaseConhecimentoPage() {
                       >
                         {method.authors}
                       </p>
+                      {method.deepLink && method.deepLinkLabel && (
+                        <Link
+                          href={method.deepLink}
+                          className="inline-flex items-center gap-1 text-xs font-medium mt-3 transition-colors hover:underline"
+                          style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}
+                        >
+                          {method.deepLinkLabel}
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </FadeInSection>
