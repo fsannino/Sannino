@@ -1,7 +1,8 @@
 import type { Article, Service, HubCard, Credencial, Pilar, NavItem } from './types';
 
 // TODO(CMS): Replace with payload.find({ collection: 'articles', limit: 3, sort: '-publishedAt' })
-export const latestArticles: Article[] = [
+// `latestArticles` é exibido na Home (3 últimos). Mantido como subset de `allArticles`.
+export const allArticles: Article[] = [
   {
     slug: 'integracao-ma-dow-corteva',
     title: 'Integração M&A em Larga Escala: Lições da Cisão Dow–DuPont–Corteva',
@@ -11,6 +12,7 @@ export const latestArticles: Article[] = [
     publishedAt: '2026-04-15',
     readingTimeMinutes: 9,
     href: '/blog/integracao-ma-dow-corteva',
+    status: 'soon',
   },
   {
     slug: 'blockchain-ia-salas-limpas',
@@ -21,6 +23,7 @@ export const latestArticles: Article[] = [
     publishedAt: '2026-03-28',
     readingTimeMinutes: 12,
     href: '/blog/blockchain-ia-salas-limpas',
+    status: 'soon',
   },
   {
     slug: 'crystal-ball-power-bi',
@@ -31,8 +34,33 @@ export const latestArticles: Article[] = [
     publishedAt: '2026-03-10',
     readingTimeMinutes: 8,
     href: '/blog/crystal-ball-power-bi',
+    status: 'soon',
+  },
+  {
+    slug: 'lamarsh-caso-de-mudanca',
+    title: 'LaMarsh em Prática: Estruturando o Caso de Mudança em 5 Passos',
+    excerpt:
+      'Como aplicar a metodologia LaMarsh para construir o "case for change" — diagnóstico de prontidão, mapeamento de stakeholders, métricas de adoção e governança da mudança em programas corporativos.',
+    category: 'Gestão da Mudança',
+    publishedAt: '2026-02-22',
+    readingTimeMinutes: 10,
+    href: '/blog/lamarsh-caso-de-mudanca',
+    status: 'planned',
+  },
+  {
+    slug: 'erros-metodologicos-banca',
+    title: 'Da Sala de Aula à Banca: 10 Erros Metodológicos Que Doem na Defesa',
+    excerpt:
+      'A partir de mais de 50 bancas como orientador, examinador e colega, os equívocos mais comuns em dissertações e teses — e como evitá-los antes da qualificação.',
+    category: 'Metodologia',
+    publishedAt: '2026-02-08',
+    readingTimeMinutes: 11,
+    href: '/blog/erros-metodologicos-banca',
+    status: 'planned',
   },
 ];
+
+export const latestArticles: Article[] = allArticles.slice(0, 3);
 
 // TODO(CMS): Replace with payload.find({ collection: 'services' })
 export const services: Service[] = [

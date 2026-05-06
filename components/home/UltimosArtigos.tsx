@@ -31,40 +31,46 @@ export function UltimosArtigos() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {latestArticles.map((article, i) => (
-            <FadeInSection key={article.slug} delay={i * 0.1}>
-              <Link href={article.href} className="block h-full group">
-                <Card className="h-full flex flex-col transition-shadow hover:shadow-card">
-                  <CardHeader>
-                    <div className="flex items-center gap-2 mb-3">
-                      <Badge variant="outline">{article.category}</Badge>
-                      <span
+          {latestArticles.map((article, i) => {
+            const isAvailable = article.status === 'available';
+            return (
+              <FadeInSection key={article.slug} delay={i * 0.1}>
+                <Link href={article.href} className="block h-full group">
+                  <Card className="h-full flex flex-col transition-shadow hover:shadow-card">
+                    <CardHeader>
+                      <div className="flex items-center gap-2 mb-3 flex-wrap">
+                        <Badge variant="outline">{article.category}</Badge>
+                        {!isAvailable && (
+                          <Badge variant="gold" className="text-[10px]">Em breve</Badge>
+                        )}
+                        <span
+                          className="text-xs"
+                          style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-dm-sans)' }}
+                        >
+                          {article.readingTimeMinutes} min
+                        </span>
+                      </div>
+                      <CardTitle className="group-hover:text-academic transition-colors leading-snug">
+                        {article.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-1 pt-3">
+                      <CardDescription className="leading-relaxed">{article.excerpt}</CardDescription>
+                    </CardContent>
+                    <CardFooter>
+                      <time
+                        dateTime={article.publishedAt}
                         className="text-xs"
                         style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-dm-sans)' }}
                       >
-                        {article.readingTimeMinutes} min
-                      </span>
-                    </div>
-                    <CardTitle className="group-hover:text-academic transition-colors leading-snug">
-                      {article.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1 pt-3">
-                    <CardDescription className="leading-relaxed">{article.excerpt}</CardDescription>
-                  </CardContent>
-                  <CardFooter>
-                    <time
-                      dateTime={article.publishedAt}
-                      className="text-xs"
-                      style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-dm-sans)' }}
-                    >
-                      {formatDate(article.publishedAt)}
-                    </time>
-                  </CardFooter>
-                </Card>
-              </Link>
-            </FadeInSection>
-          ))}
+                        {formatDate(article.publishedAt)}
+                      </time>
+                    </CardFooter>
+                  </Card>
+                </Link>
+              </FadeInSection>
+            );
+          })}
         </div>
 
         <div className="mt-8 text-center sm:hidden">

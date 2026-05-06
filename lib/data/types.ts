@@ -1,3 +1,5 @@
+export type ArticleStatus = 'available' | 'soon' | 'planned';
+
 export interface Article {
   slug: string;
   title: string;
@@ -6,6 +8,7 @@ export interface Article {
   publishedAt: string; // ISO date
   readingTimeMinutes: number;
   href: string;
+  status: ArticleStatus;
 }
 
 export interface Service {
