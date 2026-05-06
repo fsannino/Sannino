@@ -36,24 +36,12 @@ export function Hero() {
               className="text-4xl md:text-5xl lg:text-6xl leading-tight"
               style={{ fontFamily: 'var(--font-playfair)', color: 'var(--color-chalk)' }}
             >
-              Pesquisa com rigor.{' '}
+              Conectando indústria e{' '}
               <em style={{ color: 'var(--color-gold)', fontStyle: 'italic' }}>
-                Transformação
+                academia
               </em>{' '}
-              com propósito.
+              pelo conhecimento.
             </h1>
-
-            <p
-              className="text-xl md:text-2xl leading-snug max-w-xl"
-              style={{
-                color: 'var(--color-gold)',
-                fontFamily: 'var(--font-spectral)',
-                fontStyle: 'italic',
-                fontWeight: 400,
-              }}
-            >
-              Conectando indústria e academia pelo conhecimento.
-            </p>
 
             <p
               className="text-lg leading-relaxed max-w-lg"
