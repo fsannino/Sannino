@@ -44,11 +44,22 @@ export default function ServicosPage() {
               Serviços de Consultoria
             </h1>
             <p
-              className="text-lg leading-relaxed"
+              className="text-lg leading-relaxed mb-4"
               style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
             >
               Cada projeto começa com diagnóstico rigoroso e termina com resultados mensuráveis.
               Trabalho com executivos e suas equipes para garantir que a mudança aconteça — e permaneça.
+            </p>
+            <p
+              className="text-base leading-relaxed"
+              style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
+            >
+              Atuo como <strong style={{ color: 'var(--color-ink)' }}>sócio-fundador da CollabZ
+              Consultoria</strong> (São Paulo), onde lidero engajamentos end-to-end combinando
+              metodologias consagradas de gestão da mudança (LaMarsh, PROSCI, ACMP) com suporte
+              à decisão baseado em dados, automação com IA generativa e resolução de conflitos
+              em contextos de M&A. Atendo clientes nos setores farmacêutico, energia &amp; trading,
+              agronegócio e serviços financeiros.
             </p>
           </div>
         </div>
