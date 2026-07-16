@@ -32,16 +32,6 @@
     --border-color:  var(--color-rule);
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg-primary:    var(--color-ink);
-      --bg-secondary:  #16213E;
-      --text-primary:  var(--color-chalk);
-      --text-secondary: #A09890;
-      --border-color:  #2A2A4A;
-    }
-  }
-
   html {
     font-size: var(--text-base);
     -webkit-text-size-adjust: 100%;
