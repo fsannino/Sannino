@@ -60,9 +60,11 @@ export default function SobrePage() {
                 className="text-lg leading-relaxed"
                 style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
               >
-                Consultor sênior em Gestão da Mudança e Transformação Organizacional, pesquisador
-                pós-doutor e educador. Há mais de 20 anos, apoio organizações a navegar mudanças
-                complexas com rigor metodológico e foco em resultados sustentáveis.
+                Consultor executivo, conselheiro estratégico, pesquisador pós-doutor e educador.
+                Há mais de duas décadas apoio organizações na definição e execução de estratégias
+                de transformação, inovação, governança e desenvolvimento organizacional,
+                conectando pessoas, processos, tecnologia e negócios. Também atuando em mediação
+                e arbitragem para a resolução de conflitos complexos.
               </p>
               <div className="flex flex-wrap gap-2">
                 {credenciais.map((c) => (
