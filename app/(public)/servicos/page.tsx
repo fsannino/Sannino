@@ -5,6 +5,8 @@ import {
 } from 'lucide-react';
 import { services } from '@/lib/data/static';
 import { FadeInSection } from '@/components/shared/FadeInSection';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { professionalServiceSchema, breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Serviços',
@@ -25,6 +27,15 @@ const iconMap: Record<string, React.ComponentType<LucideProps>> = {
 export default function ServicosPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          professionalServiceSchema(),
+          breadcrumbSchema([
+            { name: 'Home', url: '/' },
+            { name: 'Serviços', url: '/servicos' },
+          ]),
+        ]}
+      />
       {/* Hero interno */}
       <section className="py-16 border-b" style={{ background: 'var(--color-chalk)', borderColor: 'var(--color-rule)' }}>
         <div className="container-site">

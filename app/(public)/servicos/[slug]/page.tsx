@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { Check, Users, Workflow, Package, FileSearch, HelpCircle, ArrowLeft, ArrowRight } from 'lucide-react';
 import { servicesDetail, findServiceDetail } from '@/lib/data/servicesDetail';
 import { FadeInSection } from '@/components/shared/FadeInSection';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
 
 export function generateStaticParams() {
   return servicesDetail.map((s) => ({ slug: s.slug }));
@@ -24,6 +26,16 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
   return (
     <article>
+      <JsonLd
+        data={[
+          serviceSchema({ slug: s.slug, title: s.title, description: s.intro }),
+          breadcrumbSchema([
+            { name: 'Home', url: '/' },
+            { name: 'Serviços', url: '/servicos' },
+            { name: s.title, url: `/servicos/${s.slug}` },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <header className="py-16 border-b" style={{ background: 'var(--color-chalk)', borderColor: 'var(--color-rule)' }}>
         <div className="container-site">

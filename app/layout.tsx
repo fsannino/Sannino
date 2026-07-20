@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { playfair, spectral, sourceSerif, dmSans, jetbrainsMono } from '@/lib/fonts';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { personSchema, websiteSchema } from '@/lib/schema';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -30,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       ].join(' ')}
     >
       <body>{children}</body>
+      <JsonLd data={[personSchema(), websiteSchema()]} />
     </html>
   );
 }
