@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { FileText, GraduationCap, Microscope, BookOpen, Hourglass, ExternalLink } from 'lucide-react';
+import { FileText, GraduationCap, Microscope, BookOpen, Hourglass, ExternalLink, Users, ListChecks } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { OrcidSection } from '@/components/sobre/OrcidSection';
 import { getOrcidRecord } from '@/lib/orcid';
+import { orientacoes, bancas } from '@/lib/data/orientacoes';
 
 // ISR — página revalidada a cada 1h para refletir mudanças no ORCID.
 export const revalidate = 3600;
@@ -189,6 +190,126 @@ export default async function PublicacoesPage() {
               </section>
             );
           })}
+        </div>
+      </section>
+
+      {/* Orientações acadêmicas — extraídas do Lattes */}
+      <section className="py-10 border-t" style={{ background: 'var(--color-chalk)', borderColor: 'var(--color-rule)' }}>
+        <div className="container-content flex flex-col gap-10">
+          <section>
+            <div className="flex items-center gap-2 mb-2">
+              <Users size={18} strokeWidth={1.5} style={{ color: 'var(--color-gold)' }} />
+              <h2 className="text-2xl" style={{ fontFamily: 'var(--font-playfair)' }}>
+                Orientações acadêmicas
+              </h2>
+            </div>
+            <p
+              className="text-sm mb-5"
+              style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
+            >
+              Orientação de trabalhos de conclusão em MBAs da USP — extraído do Currículo Lattes.
+            </p>
+
+            <p
+              className="text-xs uppercase tracking-widest mb-3"
+              style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}
+            >
+              Em andamento ({orientacoes.filter((o) => o.status === 'andamento').length})
+            </p>
+            <ul className="flex flex-col gap-3 mb-6">
+              {orientacoes
+                .filter((o) => o.status === 'andamento')
+                .map((o) => (
+                  <li
+                    key={o.aluno}
+                    className="rounded border p-5"
+                    style={{ borderColor: 'var(--color-rule)', background: 'var(--color-paper)' }}
+                  >
+                    <div className="flex items-center gap-2 flex-wrap mb-1">
+                      <Badge variant="outline" className="text-[10px]">{o.periodo}</Badge>
+                    </div>
+                    <p className="font-medium" style={{ fontFamily: 'var(--font-spectral)', color: 'var(--color-ink)' }}>
+                      {o.titulo}
+                    </p>
+                    <p className="text-sm mt-1" style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}>
+                      Orientando: {o.aluno}
+                    </p>
+                    <p className="text-sm mt-0.5" style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}>
+                      {o.curso} — {o.instituicao}
+                    </p>
+                  </li>
+                ))}
+            </ul>
+
+            <p
+              className="text-xs uppercase tracking-widest mb-3"
+              style={{ color: 'var(--color-forest)', fontFamily: 'var(--font-dm-sans)' }}
+            >
+              Concluídas ({orientacoes.filter((o) => o.status === 'concluida').length})
+            </p>
+            <ul className="flex flex-col gap-3">
+              {orientacoes
+                .filter((o) => o.status === 'concluida')
+                .map((o) => (
+                  <li
+                    key={o.aluno}
+                    className="rounded border p-5"
+                    style={{ borderColor: 'var(--color-rule)', background: 'var(--color-paper)' }}
+                  >
+                    <div className="flex items-center gap-2 flex-wrap mb-1">
+                      <Badge variant="forest" className="text-[10px]">{o.periodo}</Badge>
+                    </div>
+                    <p className="font-medium" style={{ fontFamily: 'var(--font-spectral)', color: 'var(--color-ink)' }}>
+                      {o.titulo}
+                    </p>
+                    <p className="text-sm mt-1" style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}>
+                      Orientando: {o.aluno}
+                    </p>
+                    <p className="text-sm mt-0.5" style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}>
+                      {o.curso} — {o.instituicao}
+                    </p>
+                  </li>
+                ))}
+            </ul>
+          </section>
+
+          <section>
+            <div className="flex items-center gap-2 mb-2">
+              <ListChecks size={18} strokeWidth={1.5} style={{ color: 'var(--color-gold)' }} />
+              <h2 className="text-2xl" style={{ fontFamily: 'var(--font-playfair)' }}>
+                Participação em bancas
+              </h2>
+            </div>
+            <p
+              className="text-sm mb-5"
+              style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
+            >
+              Avaliação de trabalhos de conclusão de curso, em conjunto com outros orientadores.
+            </p>
+            <ul className="flex flex-col gap-3">
+              {bancas.map((b) => (
+                <li
+                  key={b.aluno}
+                  className="rounded border p-5"
+                  style={{ borderColor: 'var(--color-rule)', background: 'var(--color-paper)' }}
+                >
+                  <div className="flex items-center gap-2 flex-wrap mb-1">
+                    <Badge variant="outline" className="text-[10px]">{b.ano}</Badge>
+                  </div>
+                  <p className="font-medium" style={{ fontFamily: 'var(--font-spectral)', color: 'var(--color-ink)' }}>
+                    {b.titulo}
+                  </p>
+                  <p className="text-sm mt-1" style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}>
+                    Autor(a): {b.aluno}
+                    {b.coBanca && ` · Coavaliação: ${b.coBanca}`}
+                  </p>
+                  <p className="text-sm mt-0.5" style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}>
+                    {b.curso} — {b.instituicao}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
       </section>
 
