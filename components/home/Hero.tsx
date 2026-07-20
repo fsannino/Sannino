@@ -121,6 +121,7 @@ export function Hero() {
                 alt="Fabiano Sannino"
                 fill
                 priority
+                fetchPriority="high"
                 sizes="(min-width: 1024px) 320px, 288px"
                 className="object-cover"
               />
