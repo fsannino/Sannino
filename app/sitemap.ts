@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/academico/prisma',                priority: 0.8, changeFrequency: 'monthly' },
     { path: '/blog',                            priority: 0.9, changeFrequency: 'weekly' },
     { path: '/contato',                         priority: 0.8, changeFrequency: 'yearly' },
+    { path: '/faq',                             priority: 0.6, changeFrequency: 'monthly' },
     { path: '/acesso/cadastro',                 priority: 0.6, changeFrequency: 'yearly' },
     { path: '/acesso/login',                    priority: 0.4, changeFrequency: 'yearly' },
     { path: '/legal/privacidade',               priority: 0.3, changeFrequency: 'yearly' },

@@ -139,6 +139,20 @@ export const breadcrumbSchema = (
   })),
 });
 
+// ————— FAQPage —————
+export const faqPageSchema = (items: Array<{ q: string; a: string }>) => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+});
+
 // ————— ProfessionalService (para /servicos landing) —————
 export const professionalServiceSchema = () => ({
   '@context': 'https://schema.org',
