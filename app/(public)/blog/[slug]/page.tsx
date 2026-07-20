@@ -5,6 +5,8 @@ import { Clock, Calendar, ArrowLeft, Bell } from 'lucide-react';
 import { allArticles } from '@/lib/data/static';
 import { formatDate } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { articleSchema, breadcrumbSchema } from '@/lib/schema';
 
 export function generateStaticParams() {
   return allArticles.map((a) => ({ slug: a.slug }));
@@ -29,6 +31,22 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   // Quando um artigo for publicado (status: 'available'), substituir por MDX/CMS.
   return (
     <>
+      <JsonLd
+        data={[
+          articleSchema({
+            slug: article.slug,
+            title: article.title,
+            excerpt: article.excerpt,
+            category: article.category,
+            publishedAt: article.publishedAt,
+          }),
+          breadcrumbSchema([
+            { name: 'Home', url: '/' },
+            { name: 'Blog', url: '/blog' },
+            { name: article.title, url: article.href },
+          ]),
+        ]}
+      />
       {/* Hero do artigo */}
       <article>
         <header className="py-16 border-b" style={{ background: 'var(--color-chalk)', borderColor: 'var(--color-rule)' }}>
