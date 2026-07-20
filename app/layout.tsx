@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { playfair, spectral, sourceSerif, dmSans, jetbrainsMono } from '@/lib/fonts';
 import { JsonLd } from '@/components/shared/JsonLd';
+import { Analytics } from '@/components/shared/Analytics';
 import { personSchema, websiteSchema } from '@/lib/schema';
 import './globals.css';
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body>{children}</body>
       <JsonLd data={[personSchema(), websiteSchema()]} />
+      <Analytics />
     </html>
   );
 }

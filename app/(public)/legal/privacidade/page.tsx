@@ -160,11 +160,22 @@ export default function PrivacidadePage() {
             <h3 className="text-xl mb-3" style={{ fontFamily: 'var(--font-spectral)' }}>
               6. Cookies e rastreio
             </h3>
-            <p>
-              Atualmente este site <strong>não utiliza cookies próprios nem trackers de
-              terceiros</strong>. Ao ativarmos qualquer ferramenta de analítica, será
-              apresentado banner de consentimento conforme exige a LGPD e as boas
-              práticas brasileiras.
+            <p className="mb-3">
+              Este site <strong>não utiliza cookies próprios</strong>. Usamos{' '}
+              <strong>Plausible Analytics</strong>, uma ferramenta de analítica de
+              audiência <em>privacy-first</em>, que:
+            </p>
+            <ul className="flex flex-col gap-1.5 pl-5 list-disc">
+              <li>Não usa cookies</li>
+              <li>Não coleta dados pessoais identificáveis</li>
+              <li>Não faz cross-site tracking nem fingerprinting</li>
+              <li>Agrega estatísticas em nível de página (visitas, referrer, país, dispositivo) sem construir perfil individual</li>
+              <li>É totalmente compatível com LGPD e GDPR — sem necessidade de banner de consentimento (parecer da própria ANPD sobre analíticos anônimos)</li>
+            </ul>
+            <p className="mt-3">
+              Se você preferir bloquear analíticos mesmo assim, extensões como uBlock Origin
+              e o próprio Brave/Firefox já bloqueiam Plausible por padrão sem prejudicar
+              a navegação.
             </p>
           </section>
 
