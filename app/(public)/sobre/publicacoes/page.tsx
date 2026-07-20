@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { FileText, GraduationCap, Microscope, BookOpen, Hourglass, ExternalLink, Users, ListChecks } from 'lucide-react';
+import { FileText, GraduationCap, Microscope, BookOpen, Hourglass, ExternalLink, Users, ListChecks, ShieldCheck } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { OrcidSection } from '@/components/sobre/OrcidSection';
 import { getOrcidRecord } from '@/lib/orcid';
-import { orientacoes, bancas } from '@/lib/data/orientacoes';
+import { orientacoes, bancas, instituicaoOrientacoes, type Curso } from '@/lib/data/orientacoes';
+
+const CURSOS: Curso[] = ['Gestão de Projetos', 'Data Science e Analytics', 'Digital Business'];
 
 // ISR — página revalidada a cada 1h para refletir mudanças no ORCID.
 export const revalidate = 3600;
@@ -193,7 +195,7 @@ export default async function PublicacoesPage() {
         </div>
       </section>
 
-      {/* Orientações acadêmicas — extraídas do Lattes */}
+      {/* Orientações acadêmicas — declarações oficiais PECEGE/ESALQ-USP + Lattes */}
       <section className="py-10 border-t" style={{ background: 'var(--color-chalk)', borderColor: 'var(--color-rule)' }}>
         <div className="container-content flex flex-col gap-10">
           <section>
@@ -204,73 +206,61 @@ export default async function PublicacoesPage() {
               </h2>
             </div>
             <p
-              className="text-sm mb-5"
+              className="text-sm mb-2"
               style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
             >
-              Orientação de trabalhos de conclusão em MBAs da USP — extraído do Currículo Lattes.
+              Orientação de Trabalhos de Conclusão de Curso (TCC) nos MBAs da {instituicaoOrientacoes}.
             </p>
 
-            <p
-              className="text-xs uppercase tracking-widest mb-3"
-              style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}
+            {/* Resumo */}
+            <div
+              className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded mb-6"
+              style={{ background: 'rgba(45,106,79,0.10)', color: 'var(--color-forest)', fontFamily: 'var(--font-dm-sans)' }}
             >
-              Em andamento ({orientacoes.filter((o) => o.status === 'andamento').length})
-            </p>
-            <ul className="flex flex-col gap-3 mb-6">
-              {orientacoes
-                .filter((o) => o.status === 'andamento')
-                .map((o) => (
-                  <li
-                    key={o.aluno}
-                    className="rounded border p-5"
-                    style={{ borderColor: 'var(--color-rule)', background: 'var(--color-paper)' }}
+              <ShieldCheck size={13} strokeWidth={2} />
+              {orientacoes.length} orientações concluídas · 3 cursos de MBA · 2023–2026
+            </div>
+
+            {CURSOS.map((curso) => {
+              const items = orientacoes
+                .filter((o) => o.curso === curso)
+                .sort((a, b) => b.ano - a.ano);
+              if (items.length === 0) return null;
+              return (
+                <div key={curso} className="mb-8 last:mb-0">
+                  <p
+                    className="text-xs uppercase tracking-widest mb-3"
+                    style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}
                   >
-                    <div className="flex items-center gap-2 flex-wrap mb-1">
-                      <Badge variant="outline" className="text-[10px]">{o.periodo}</Badge>
-                    </div>
-                    <p className="font-medium" style={{ fontFamily: 'var(--font-spectral)', color: 'var(--color-ink)' }}>
-                      {o.titulo}
-                    </p>
-                    <p className="text-sm mt-1" style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}>
-                      Orientando: {o.aluno}
-                    </p>
-                    <p className="text-sm mt-0.5" style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}>
-                      {o.curso} — {o.instituicao}
-                    </p>
-                  </li>
-                ))}
-            </ul>
+                    MBA em {curso} ({items.length})
+                  </p>
+                  <ul className="flex flex-col gap-3">
+                    {items.map((o) => (
+                      <li
+                        key={o.aluno}
+                        className="rounded border p-4"
+                        style={{ borderColor: 'var(--color-rule)', background: 'var(--color-paper)' }}
+                      >
+                        <p className="font-medium leading-snug" style={{ fontFamily: 'var(--font-spectral)', color: 'var(--color-ink)' }}>
+                          {o.titulo}
+                        </p>
+                        <p className="text-sm mt-1.5" style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}>
+                          Orientando(a): {o.aluno} · Defesa em {o.dataDefesa}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
 
             <p
-              className="text-xs uppercase tracking-widest mb-3"
-              style={{ color: 'var(--color-forest)', fontFamily: 'var(--font-dm-sans)' }}
+              className="text-xs mt-2"
+              style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-dm-sans)' }}
             >
-              Concluídas ({orientacoes.filter((o) => o.status === 'concluida').length})
+              Fonte: declarações de orientação emitidas pelo PECEGE/ESALQ-USP (com token de
+              validação individual) e Currículo Lattes.
             </p>
-            <ul className="flex flex-col gap-3">
-              {orientacoes
-                .filter((o) => o.status === 'concluida')
-                .map((o) => (
-                  <li
-                    key={o.aluno}
-                    className="rounded border p-5"
-                    style={{ borderColor: 'var(--color-rule)', background: 'var(--color-paper)' }}
-                  >
-                    <div className="flex items-center gap-2 flex-wrap mb-1">
-                      <Badge variant="forest" className="text-[10px]">{o.periodo}</Badge>
-                    </div>
-                    <p className="font-medium" style={{ fontFamily: 'var(--font-spectral)', color: 'var(--color-ink)' }}>
-                      {o.titulo}
-                    </p>
-                    <p className="text-sm mt-1" style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}>
-                      Orientando: {o.aluno}
-                    </p>
-                    <p className="text-sm mt-0.5" style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}>
-                      {o.curso} — {o.instituicao}
-                    </p>
-                  </li>
-                ))}
-            </ul>
           </section>
 
           <section>
@@ -284,7 +274,8 @@ export default async function PublicacoesPage() {
               className="text-sm mb-5"
               style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
             >
-              Avaliação de trabalhos de conclusão de curso, em conjunto com outros orientadores.
+              Avaliação de trabalhos de conclusão de curso, em conjunto com outros orientadores —
+              extraído do Currículo Lattes.
             </p>
             <ul className="flex flex-col gap-3">
               {bancas.map((b) => (
@@ -304,7 +295,7 @@ export default async function PublicacoesPage() {
                     {b.coBanca && ` · Coavaliação: ${b.coBanca}`}
                   </p>
                   <p className="text-sm mt-0.5" style={{ color: 'var(--color-academic)', fontFamily: 'var(--font-dm-sans)' }}>
-                    {b.curso} — {b.instituicao}
+                    MBA em {b.curso} — {instituicaoOrientacoes}
                   </p>
                 </li>
               ))}
