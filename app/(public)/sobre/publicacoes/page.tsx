@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FileText, GraduationCap, Microscope, BookOpen, Hourglass, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { OrcidSection } from '@/components/sobre/OrcidSection';
+import { getOrcidRecord } from '@/lib/orcid';
+
+// ISR — página revalidada a cada 1h para refletir mudanças no ORCID.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Publicações — Sobre',
@@ -66,7 +71,8 @@ const categorias = [
   },
 ];
 
-export default function PublicacoesPage() {
+export default async function PublicacoesPage() {
+  const orcidRecord = await getOrcidRecord();
   return (
     <>
       <section className="py-14 border-b" style={{ background: 'var(--color-chalk)', borderColor: 'var(--color-rule)' }}>
@@ -183,6 +189,13 @@ export default function PublicacoesPage() {
               </section>
             );
           })}
+        </div>
+      </section>
+
+      {/* ORCID sync — atualização automática */}
+      <section className="py-10 border-t" style={{ background: 'var(--color-paper)', borderColor: 'var(--color-rule)' }}>
+        <div className="container-content">
+          <OrcidSection record={orcidRecord} />
         </div>
       </section>
 
