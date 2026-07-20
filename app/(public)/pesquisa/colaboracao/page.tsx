@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Users, Building2, Microscope, GraduationCap, Mail, Check, ArrowLeft, type LucideProps } from 'lucide-react';
+import { Users, Building2, Microscope, GraduationCap, Scale, Mail, Check, ArrowLeft, type LucideProps } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Colaborar em Pesquisa',
   description:
-    'Modalidades de colaboração em pesquisa com Fabiano Sannino: coautoria acadêmica, parcerias com indústria farmacêutica/ANVISA, orientação de mestrado/doutorado, projetos aplicados em IA generativa em contextos regulados.',
+    'Modalidades de colaboração em pesquisa com Fabiano Sannino: coautoria acadêmica, parcerias com indústria farmacêutica/ANVISA, orientação de mestrado/doutorado, métodos alternativos de resolução de conflitos (arbitragem, mediação, conciliação) e projetos aplicados em IA generativa em contextos regulados.',
 };
 
 const modalities: Array<{
@@ -47,6 +47,14 @@ const modalities: Array<{
       'Mesas redondas, palestras técnicas, contribuições a consultas públicas, white papers e capacitação em temas de transformação regulatória, IA generativa em compliance e gestão da mudança.',
     asks: ['Palestra / mesa', 'Contribuição a consulta pública', 'White paper', 'Workshop in-company'],
   },
+  {
+    icon: Scale,
+    title: 'Métodos Alternativos de Resolução de Conflitos',
+    audience: 'Câmaras de arbitragem, escritórios jurídicos, tribunais',
+    description:
+      'Pesquisa aplicada em arbitragem, mediação e conciliação — estudos de caso, análises comparadas de câmaras e tribunais, e desenho de programas de capacitação. Ancorada na pós-graduação pela EPM, certificação CIArb (UK) e atuação como Conciliador Judicial no TJSP.',
+    asks: ['Estudo de caso de câmara/tribunal', 'Treinamento em técnicas de mediação', 'Pesquisa comparada de sistemas de ADR', 'Coautoria em artigo/parecer técnico'],
+  },
 ];
 
 const principles = [
@@ -84,7 +92,7 @@ export default function ColaboracaoPage() {
               className="text-lg leading-relaxed"
               style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
             >
-              Boa pesquisa raramente é solo. Quatro modalidades estão abertas — escolha
+              Boa pesquisa raramente é solo. Cinco modalidades estão abertas — escolha
               a que faz sentido para você.
             </p>
           </div>

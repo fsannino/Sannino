@@ -46,6 +46,15 @@ export const researchLines: ResearchLine[] = [
     status: 'ongoing',
     keywords: ['Python', 'OpenAI', 'RAG', 'Agentes', 'Pandas', 'scikit-learn'],
   },
+  {
+    id: 'metodos-resolucao-conflitos',
+    title: 'Métodos Alternativos de Resolução de Conflitos',
+    short: 'Arbitragem · Mediação · Conciliação',
+    description:
+      'Investiga a aplicação de métodos alternativos de resolução de conflitos — arbitragem, mediação e conciliação — em disputas corporativas, contratuais e pós-fusão. Ancorada na pós-graduação pela EPM (Escola Paulista da Magistratura), na certificação CIArb (UK) e na atuação como Conciliador Judicial no TJSP.',
+    status: 'ongoing',
+    keywords: ['Arbitragem', 'Mediação', 'Conciliação', 'CIArb', 'TJSP', 'Disputas M&A'],
+  },
 ];
 
 export const digitalProducts: DigitalProduct[] = [
