@@ -22,6 +22,7 @@ const footerLinks = {
   ],
   Contato: [
     { label: 'Fale comigo', href: '/contato' },
+    { label: 'Perguntas Frequentes', href: '/faq' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/fabianosannino' },
     { label: 'Lattes', href: 'http://lattes.cnpq.br/' },
     { label: 'Pesquisa', href: '/pesquisa' },
