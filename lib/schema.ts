@@ -45,7 +45,7 @@ export const personSchema = () => ({
     'PMO e Portfólio Estratégico',
     'Data Analytics & Business Intelligence',
     'IA Generativa aplicada',
-    'Resolução de Disputas',
+    'Métodos Alternativos de Resolução de Conflitos (Arbitragem, Mediação, Conciliação)',
     'Blockchain em ambientes regulados (ANVISA, ALCOA+)',
   ],
   sameAs: [

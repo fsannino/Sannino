@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { FlaskConical, Cpu, Network, ArrowRight, ExternalLink, type LucideProps } from 'lucide-react';
+import { FlaskConical, Cpu, Network, Scale, ArrowRight, ExternalLink, type LucideProps } from 'lucide-react';
 import { researchLines, digitalProducts } from '@/lib/data/research';
 import { FadeInSection } from '@/components/shared/FadeInSection';
 import { Badge } from '@/components/ui/badge';
@@ -8,13 +8,14 @@ import { Badge } from '@/components/ui/badge';
 export const metadata: Metadata = {
   title: 'Pesquisa',
   description:
-    'Linhas de pesquisa de Fabiano Sannino: Blockchain + IA Generativa em farma (Pós-Doc UNICAMP/FCA), Change Management em M&A (Doutorado FEA-USP) e Data Science aplicada (MBA ESALQ-USP). Produtos digitais como laboratório vivo.',
+    'Linhas de pesquisa de Fabiano Sannino: Blockchain + IA Generativa em farma (Pós-Doc UNICAMP/FCA), Change Management em M&A (Doutorado FEA-USP), Data Science aplicada (MBA ESALQ-USP) e Métodos Alternativos de Resolução de Conflitos (arbitragem, mediação, conciliação). Produtos digitais como laboratório vivo.',
 };
 
 const lineIconMap: Record<string, React.ComponentType<LucideProps>> = {
   'blockchain-ia-farma': Cpu,
   'change-management-ma': Network,
   'data-ia-aplicada': FlaskConical,
+  'metodos-resolucao-conflitos': Scale,
 };
 
 const statusLabel = {
@@ -61,7 +62,7 @@ export default function PesquisaPage() {
               style={{ color: 'var(--color-footnote)', fontFamily: 'var(--font-source-serif)' }}
             >
               Doutor em Administração de Empresas pela FEA-USP (2021), MBA em Data Science
-              & Analytics pela ESALQ-USP (2024) e Pós-Doutorando UNICAMP/FCA. Três linhas
+              & Analytics pela ESALQ-USP (2024) e Pós-Doutorando UNICAMP/FCA. Quatro linhas
               ativas, integradas com prática consultiva e produtos digitais próprios.
             </p>
           </div>
@@ -79,11 +80,11 @@ export default function PesquisaPage() {
               Linhas de pesquisa
             </p>
             <h2 className="text-3xl md:text-4xl mb-3" style={{ fontFamily: 'var(--font-playfair)' }}>
-              Três frentes ativas
+              Quatro frentes ativas
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {researchLines.map((line, i) => {
               const Icon = lineIconMap[line.id] ?? FlaskConical;
               const sColor = statusColor[line.status];
@@ -282,8 +283,8 @@ export default function PesquisaPage() {
                 style={{ color: 'rgba(250,250,247,0.75)', fontFamily: 'var(--font-source-serif)' }}
               >
                 Aberto a co-autorias, orientações de mestrado/doutorado, parcerias com
-                indústria farmacêutica, ANVISA e iniciativas em IA generativa aplicada
-                a contextos regulados.
+                indústria farmacêutica, ANVISA, câmaras de arbitragem e mediação, e
+                iniciativas em IA generativa aplicada a contextos regulados.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">

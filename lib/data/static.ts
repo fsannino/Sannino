@@ -203,7 +203,7 @@ export const tresPilares: Pilar[] = [
   {
     title: 'Consultor',
     description:
-      'Transformação corporativa, integração M&A, Data & IA Generativa e resolução de disputas para corporações globais. MCMP™/CCMP™ pela ACMP, PMP/SAFe pelo PMI, LaMarsh Certified.',
+      'Transformação corporativa, integração M&A, Data & IA Generativa e métodos alternativos de resolução de conflitos (arbitragem, mediação, conciliação) para corporações globais. MCMP™/CCMP™ pela ACMP, PMP/SAFe pelo PMI, LaMarsh Certified.',
     stats: '20+',
     statsLabel: 'anos de experiência',
     icon: 'Briefcase',
